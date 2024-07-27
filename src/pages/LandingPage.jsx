@@ -20,7 +20,7 @@ function LandingPage() {
         <div className="flex justify-center flex-col">
           <h1 className="sm:text-6xl font-[700] text-wrap text-4xl !leading-[4rem]">Empowering Students to <WordRotate words={words} /> and Succeed.</h1>
           <div className="mt-8 text-xl">At AR Tutors, we believe in nurturing individual potential through personalized education and unwavering support.</div>
-          <div className="flex justify-center items-center sm:flex-row flex-col gap-4 mt-7">
+          <div className="flex justify-left items-center sm:flex-row flex-col gap-4 mt-7">
           <button className="bg-blue-500 text-white p-2 px-4 rounded-3xl shadow-md shadow-blue-500 text-lg">Demo Video</button>
           <button className="text-blue-500 border-2 border-blue-500 bor p-2 px-4 rounded-3xl text-lg">Register a Call</button>
           

@@ -13,10 +13,10 @@ const Navbar = () => {
     {Name:"NOTES",RedirectLink:"/Notes"}
   ];
 
-  let[open,setopen]=useState(true)
+  let[open,setopen]=useState(false)
   
   return (
-    <div className='fixed top-0 left-0 w-full sm:px-16 sm:my-2 '>
+    <div className='w-full sm:px-16 sm:my-2 '>
       <div className=' font-Main-font pb-2 justify-between bg-white items-center md:pb-0 md:flex sm:bg-transparent'>
         <div className=''>
           <img src={logo_nav} alt="Logo" className=" h-12 pt-2 ml-3 md:pt-0 md:ml-4" />
@@ -24,26 +24,26 @@ const Navbar = () => {
         <div
         onClick={()=>{setopen(!open)}} 
         className='text-3xl absolute right-6 top-4 cursor-pointer md:hidden'>
-          <MdOutlineMenu className={!open?"":"hidden"}/>
-          <MdClose className={!open?"hidden":""}/>
+          <MdOutlineMenu className={open?"hidden":""}/>
+          <MdClose className={open?"":"hidden"}/>
         </div>
           <ul 
+          
           className={`text-gray-700 md:flex md:gap-12 md:p-2 transition-all duration-500 ease-in
           ${open?"":"hidden"}`}> 
             {
               navLinks.map((navLinks)=>(
-                <li className='my-7 font-medium text-center text-[14px] px-4 md:my-0 md:text-[12px] md:px-1'>
+                <li key={navLinks.Name} className='my-7 font-medium text-center text-[14px] px-4 md:my-0 md:text-sm md:px-1 '>
                   <a href={navLinks.RedirectLink}>{navLinks.Name}</a>
                 </li>
               ))
             }
           </ul>
-          <div className='max-sm:w-full flex items-center justify-center'>
-            <button className={`text-white font-bold text-[14px] px-4 py-2 bg-primary rounded-md md:ml-0 ${open?"":"hidden"}`}>
+          <div className=' flex items-center justify-center'>
+            <button className={`text-white font-bold text-[14px] px-4 py-2 md:text-sm bg-primary rounded-md md:ml-0 ${open?"":"hidden"} md:block`}>
               Register A Call
             </button>
           </div>
-
       </div>
       
     </div>
