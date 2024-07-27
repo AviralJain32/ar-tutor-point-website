@@ -6,12 +6,12 @@ import Background from "../assets/Background.svg"
 
 const MainLayout = () => {
   return (
-    <div >
+    <div>
     <Navbar/>
     <div style={{backgroundImage:`url(${Background})`,
                 backgroundBlendMode: "overlay",
-                backgroundColor: 'rgba(255, 255, 255, 0.95)', 
-                    }} className='min-h-screen'>
+                backgroundColor: 'rgba(255, 255, 255, 0.92)', 
+                    }} className='min-h-screen sm:px-16 px-6'>
       <Outlet/>
       </div>
       <Footer/>
