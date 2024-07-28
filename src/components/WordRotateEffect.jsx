@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function WordRotate({
   words,
-  duration = 2500,
+  duration = 2200,
   framerProps = {
     initial: { opacity: 0, y: -50 },
     animate: { opacity: 1, y: 0 },
