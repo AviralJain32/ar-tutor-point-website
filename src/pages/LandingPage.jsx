@@ -12,12 +12,12 @@ function LandingPage() {
       {/* section 1 */}
       <div className=" grid sm:grid-cols-2 relative">
 
-        <img src={cubeForBg} alt="" className="absolute left-[47rem] h-24"/>
-        <img src={trianglecubeForBg} alt="" className="absolute -left-16 top-16 h-24"/>
-        <img src={roundedCubeForBg} alt="" className="absolute -bottom-16 left-[35rem] h-24"/>
-        <img src={cylindercubeForBg} alt="" className="absolute right-0 bottom-0 h-24"/>
+        <img src={cubeForBg} alt="" className="absolute hidden sm:block left-[47rem] h-24"/>
+        <img src={trianglecubeForBg} alt="" className="absolute hidden sm:block -left-16 top-16 h-24"/>
+        <img src={roundedCubeForBg} alt="" className="absolute hidden sm:block -bottom-16 left-[35rem] h-24"/>
+        <img src={cylindercubeForBg} alt="" className="absolute hidden sm:block right-0 bottom-0 h-24"/>
 
-        <div className="flex justify-center flex-col">
+        <div className="flex justify-center flex-col ">
           <h1 className="sm:text-6xl font-[700] text-wrap text-4xl !leading-[4rem]">Empowering Students to <WordRotate words={words} /> and Succeed.</h1>
           <div className="mt-8 text-xl">At AR Tutors, we believe in nurturing individual potential through personalized education and unwavering support.</div>
           <div className="flex justify-left items-center sm:flex-row flex-col gap-4 mt-7">
