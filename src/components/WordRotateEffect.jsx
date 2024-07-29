@@ -30,7 +30,7 @@ export default function WordRotate({
       <AnimatePresence mode="wait">
         <motion.h1 
           key={words[index]}
-          className={`${className} inline-block ${words[index]=="dream"?"text-blue-500":""} ${words[index]=="create"?"text-green-500":""} ${words[index]=="inspire"?"text-orange-400":""}`}
+          className={`${className} w-[9.2rem] text-left inline-block ${words[index]=="dream"?"text-blue-500":""} ${words[index]=="create"?"text-green-500":""} ${words[index]=="inspire"?"text-orange-400":""}`}
           {...framerProps}
         >
           {words[index]}
