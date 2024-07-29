@@ -7,7 +7,7 @@ const Navbar = () => {
   
   const navLinks=[
     {Name:"HOME",RedirectLink:"/"},
-    {Name:"ABOUT US",RedirectLink:"/About"},
+    {Name:"ABOUT US",RedirectLink:"/aboutus"},
     {Name:"RESULTS",RedirectLink:"/Results"},
     {Name:"REVIEWS",RedirectLink:"/Reviews"},
     {Name:"NOTES",RedirectLink:"/Notes"}
