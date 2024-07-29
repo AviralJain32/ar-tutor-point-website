@@ -32,7 +32,9 @@ function LandingPage() {
           
           </div>
         </div>
-        <div className="flex justify-end items-center"><img className="my-5 " src={sirLandingPage}></img></div>
+        <div className="flex justify-end items-center">
+          <img className="my-5 " src={sirLandingPage}></img>
+        </div>
       </div>
 
       {/* section 2  */}

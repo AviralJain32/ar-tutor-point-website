@@ -4,7 +4,7 @@ import {IoLogoFacebook,IoLogoInstagram,IoLogoYoutube} from 'react-icons/io5'
 
 const Footer = () => {
   return (
-    <div className=''>
+    <div className='bg-red-500'>
       <footer className='bg-[#2A3168] text-white font-Main-font px-12 py-5 sm:py-10 md:px-16'>
         <div className='flex justify-between'>
           <a href='/'>
