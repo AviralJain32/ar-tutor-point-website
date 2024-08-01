@@ -10,8 +10,8 @@ const MainLayout = () => {
     <Navbar/>
     <div style={{backgroundImage:`url(${Background})`,
                 backgroundBlendMode: "overlay",
-                backgroundRepeat:'repeat',
-                backgroundColor: 'rgba(255, 255, 255, 0.97)', 
+                backgroundRepeat:"repeat",
+                backgroundColor: 'rgba(255, 255, 255, 0.95)', 
                     }} className='min-h-screen sm:px-16 px-6'>
       <Outlet/>
       </div>

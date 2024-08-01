@@ -16,10 +16,10 @@ const Navbar = () => {
   let[open,setopen]=useState(false)
   
   return (
-    <div className='w-full sm:px-16 sm:my-2'>
+    <div className='w-full sm:px-16 sm:my-2 '>
       <div className=' font-Main-font pb-2 justify-between bg-white items-center md:pb-0 md:flex sm:bg-transparent'>
         <div className=''>
-          <img src={logo_nav} alt="Logo" className=" h-12 pt-2 ml-3 md:pt-0 md:ml-4" />
+          <img src={logo_nav} alt="Logo" className=" h-16 pt-2 ml-3 md:pt-0 md:ml-4" />
         </div>
         <div
         onClick={()=>{setopen(!open)}} 
@@ -33,7 +33,7 @@ const Navbar = () => {
           ${open?"":"hidden"}`}> 
             {
               navLinks.map((navLinks)=>(
-                <li key={navLinks.Name} className='my-7 font-medium text-center text-[14px] px-4 md:my-0 md:text-sm md:px-1 '>
+                <li key={navLinks.Name} className='my-7 font-medium text-center text-[14px] px-4 md:my-0 md:text-lg md:px-1 '>
                   <a href={navLinks.RedirectLink}>{navLinks.Name}</a>
                 </li>
               ))
