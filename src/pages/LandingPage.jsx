@@ -17,6 +17,7 @@ import Notes from "../assets/Notes.svg"
 import ReferenceBooks from "../assets/ReferenceBooks.svg"
 import QuestionPaper from "../assets/Questionpaper.svg"
 import { FaArrowRight } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom"
 
 function LandingPage() {
   const images=[{image:RakeshSir,name:"Rakesh Yadav",description:"Faculty of Chemistry & Mathematics"},
@@ -30,6 +31,7 @@ function LandingPage() {
   ]
 
   const words=["dream","create","inspire"]
+  const navigate=useNavigate()
   return (
     <div className="space-y-28">
       {/* section 1 */}
@@ -44,7 +46,7 @@ function LandingPage() {
           <h1 className="sm:text-5xl font-[700] text-wrap text-4xl !leading-[4rem]">Empowering Students to <WordRotate words={words} /> and Succeed.</h1>
           <div className="mt-8 text-xl">At AR Tutors, we believe in nurturing individual potential through personalized education and unwavering support.</div>
           <div className="flex justify-left items-center sm:flex-row flex-col gap-4 mt-7">
-          <button className="bg-primary text-white p-2 px-4 rounded-3xl shadow-md shadow-primary text-lg" >Demo Video</button>
+          <button className="bg-primary text-white p-2 px-4 rounded-3xl shadow-md shadow-primary text-lg" onClick={()=>navigate("/demo")}>Demo Video</button>
           <button className="text-primary border-2 border-primary bor p-2 px-4 rounded-3xl text-lg">Register a Call</button>
           
           </div>
