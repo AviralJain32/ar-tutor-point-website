@@ -8,7 +8,8 @@ const MainLayout = () => {
   return (
     <div>
     <Navbar/>
-    <div style={{backgroundImage:`url(${Background})`,
+    <div style={{
+                backgroundImage:`url(${Background})`,
                 backgroundBlendMode: "overlay",
                 backgroundRepeat:"repeat",
                 backgroundColor: 'rgba(255, 255, 255, 0.95)', 

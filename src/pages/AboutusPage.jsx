@@ -10,7 +10,7 @@ import img3 from "../assets/img3.png"
 import img4 from "../assets/img4.png"
 import img5 from "../assets/img5.png"
 import BlurFade from "../components/cardfade"
-import Vectorimg from "../assets/Vector8.svg"
+import vectorimg from "../assets/Vector8.svg"
 
 const AboutusPage = () => {
   const about="At AR Tutor's Point, we provide a friendly, supportive environment for Class 9th to 12th CBSE students. With small batch sizes and a balance of fun and studies, our expert faculty ensure personalized attention and academic excellence."
@@ -21,8 +21,10 @@ const AboutusPage = () => {
 
   return (
     <div className="font-Main-font">
+
+      <div style={{backgroundImage:`url(${vectorimg})`,backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundPosition:"left top"}}>
       <div className="flex justify-center">
-      <Vectorimg className="h-12 w-2"/>
+
         <h1 className="text-[32px] font-extrabold">About Us</h1>
       </div>
       <div className="mt-12 px-12 sm:mx-14 w-auto flex-row justify-center items-center sm:justify-between sm:items-center sm:flex">
@@ -40,6 +42,8 @@ const AboutusPage = () => {
         <div className="flex  justify-center sm:px-32">
           <p className="pt-3 text-[16px]  text-pretty text-center">{mission}</p>
         </div>
+
+
       </div>
       <div className="flex-col items-center justify-center sm:my-[150px]">
         <div className="flex justify-center">
@@ -63,6 +67,7 @@ const AboutusPage = () => {
             <p className="py-3">Supportive Environment</p>
           </div>
         </div>  
+      </div>
       </div>
       <div className="flex-col items-center justify-center sm:mx-10 sm:my-[100px]">
         <div className="flex justify-center"><h1 className="text-[32px] font-extrabold">Highlights</h1></div>
