@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import logo_nav from '../assets/logo-for-navbar.svg'
 import {MdOutlineMenu} from "react-icons/md"
 import {MdClose} from "react-icons/md"
+import Headroom from 'react-headroom'
 
 const Navbar = () => {
   
@@ -16,9 +17,9 @@ const Navbar = () => {
   let[open,setopen]=useState(false)
   
   return (
-    <div className='w-full sm:px-16 sm:my-2 '>
-      <div className=' font-Main-font pb-2 justify-between bg-white items-center md:pb-0 md:flex sm:bg-transparent'>
-        <div className=''>
+    <Headroom className='w-full sticky z-10 bg-white sm:px-16 sm:my-2 '>
+      <div className=' font-Main-font pb-2 justify-between bg-white items-center md:pb-0 md:flex '>
+        <div className='' >
           <img src={logo_nav} alt="Logo" className=" h-12 pt-2 ml-3 md:pt-0 md:ml-4" />
         </div>
         <div
@@ -33,7 +34,7 @@ const Navbar = () => {
           ${open?"":"hidden"}`}> 
             {
               navLinks.map((navLinks)=>(
-                <li key={navLinks.Name} className='my-7 font-medium text-center text-[14px] px-4 md:my-0 md:text-md md:px-1 '>
+                <li key={navLinks.Name} className='my-7 font-medium text-center text-[14px] px-4 md:my-0 md:text-md md:px-1 hover:text-gray-400 duration-200 ease-in-out'>
                   <a href={navLinks.RedirectLink}>{navLinks.Name}</a>
                 </li>
               ))
@@ -46,7 +47,7 @@ const Navbar = () => {
           </div>
       </div>
       
-    </div>
+    </Headroom>
   )
 }
 
