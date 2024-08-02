@@ -18,6 +18,7 @@ import ReferenceBooks from "../assets/ReferenceBooks.svg"
 import QuestionPaper from "../assets/Questionpaper.svg"
 import { FaArrowRight } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom"
+import TestimonialCard from "../components/TestimonialCard"
 
 function LandingPage() {
   const images=[{image:RakeshSir,name:"Rakesh Yadav",description:"Faculty of Chemistry & Mathematics"},
@@ -115,6 +116,34 @@ function LandingPage() {
               <MarqueeDemo/>
             </div>
 
+            {/* Testimonails - section */}
+            <div className="flex overflow-x-auto space-x-4 py-4 px-2 snap-x snap-mandatory">
+            <div className="snap-center flex-shrink-0">
+              <TestimonialCard />
+            </div>
+            <div className="snap-center  flex-shrink-0">
+              <TestimonialCard />
+            </div>
+            <div className="snap-center  flex-shrink-0">
+              <TestimonialCard />
+            </div>
+            
+            {/* <div className="snap-center">
+              <TestimonialCard />
+            </div>
+            <div className="snap-center">
+              <TestimonialCard />
+            </div>
+            <div className="snap-center">
+              <TestimonialCard />
+            </div>
+            <div className="snap-center">
+              <TestimonialCard />
+            </div> */}
+          </div>
+
+
+
             {/* section - study resourses */}
             <div>
               <h1 className="text-3xl font-bold text-center my-6">Study Resources</h1>
@@ -132,6 +161,7 @@ function LandingPage() {
             </div>
 
             
+
     </div>
   )
 }

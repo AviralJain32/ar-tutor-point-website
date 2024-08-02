@@ -67,7 +67,7 @@ const AboutusPage = () => {
           <BlurFade delay={0.25} inView>
             <img src={img1} className="w-full object-cover rounded-xl"></img>
           </BlurFade>
-          <BlurFade delay={0.25 } inView>
+          <BlurFade delay={0.25} inView>
             <img src={img3} className="w-full object-cover rounded-xl"></img>
           </BlurFade>
           <BlurFade delay={0.25 * 2} inView> 
