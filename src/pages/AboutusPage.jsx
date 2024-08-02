@@ -10,16 +10,19 @@ import img3 from "../assets/img3.png"
 import img4 from "../assets/img4.png"
 import img5 from "../assets/img5.png"
 import BlurFade from "../components/cardfade"
+import Vectorimg from "../assets/Vector8.svg"
 
 const AboutusPage = () => {
   const about="At AR Tutor's Point, we provide a friendly, supportive environment for Class 9th to 12th CBSE students. With small batch sizes and a balance of fun and studies, our expert faculty ensure personalized attention and academic excellence."
 
   const mission="At AR Tutor's Point, we emphasize personalized learning, conceptual clarity, interactive teaching methods, and regular assessments. Our goal is to empower students with a solid understanding of fundamental concepts, foster engagement through innovative techniques, and prepare them for academic success and beyond."
 
+  
 
   return (
     <div className="font-Main-font">
       <div className="flex justify-center">
+      <Vectorimg className="h-12 w-2"/>
         <h1 className="text-[32px] font-extrabold">About Us</h1>
       </div>
       <div className="mt-12 px-12 sm:mx-14 w-auto flex-row justify-center items-center sm:justify-between sm:items-center sm:flex">
