@@ -17,7 +17,7 @@ const Navbar = () => {
   let[open,setopen]=useState(false)
   
   return (
-    <Headroom className='w-full sticky z-10 bg-white sm:px-16 sm:my-2 '>
+    <div className='w-full sticky top-0 z-10 bg-white sm:px-16 sm:py-2 '>
       <div className=' font-Main-font pb-2 justify-between bg-white items-center md:pb-0 md:flex '>
         <div className='' >
           <img src={logo_nav} alt="Logo" className=" h-12 pt-2 ml-3 md:pt-0 md:ml-4" />
@@ -47,7 +47,7 @@ const Navbar = () => {
           </div>
       </div>
       
-    </Headroom>
+    </div>
   )
 }
 

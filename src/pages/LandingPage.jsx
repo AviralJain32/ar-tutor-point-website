@@ -19,6 +19,8 @@ import QuestionPaper from "../assets/Questionpaper.svg"
 import { FaArrowRight } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom"
 import TestimonialCard from "../components/TestimonialCard"
+import  Crousal from "../components/Crousal"
+import { ThreeDCardDemo } from "../components/Sir3DCard"
 
 function LandingPage() {
   const images=[{image:RakeshSir,name:"Rakesh Yadav",description:"Faculty of Chemistry & Mathematics"},
@@ -36,14 +38,14 @@ function LandingPage() {
   return (
     <div className="space-y-28">
       {/* section 1 */}
-      <div className=" grid sm:grid-cols-2 relative">
+      <div className="flex justify-around flex-col md:flex-row  relative"> 
 
         <img src={cubeForBg} alt="" className="absolute hidden sm:block left-[47rem] h-24"/>
         <img src={trianglecubeForBg} alt="" className="absolute hidden sm:block -left-16 top-16 h-24"/>
         <img src={roundedCubeForBg} alt="" className="absolute hidden sm:block -bottom-0 left-[35rem] h-24"/>
         <img src={cylindercubeForBg} alt="" className="absolute hidden sm:block right-0 bottom-0 h-24"/>
 
-        <div className="flex justify-center flex-col">
+        <div className="flex justify-center flex-col md:w-[40rem]">
           <h1 className="sm:text-5xl font-[700] text-wrap text-4xl !leading-[4rem]">Empowering Students to <WordRotate words={words} /> and Succeed.</h1>
           <div className="mt-8 text-xl">At AR Tutors, we believe in nurturing individual potential through personalized education and unwavering support.</div>
           <div className="flex justify-left items-center sm:flex-row flex-col gap-4 mt-7">
@@ -52,7 +54,7 @@ function LandingPage() {
           
           </div>
         </div>
-        <div className="flex justify-end items-center">
+        <div className="flex justify-center items-center">
           <img className="my-5 " src={sirLandingPage}></img>
         </div>
       </div>
@@ -94,16 +96,17 @@ function LandingPage() {
       
       {/* section- Meet our team */}
       <div>
-        <div className="flex justify-center items-center flex-col gap-3 m-2">
+        <div className="flex justify-center items-center flex-col m-2">
           <h1 className="text-3xl font-bold">Meet Our Team</h1>
           <h2 className="text-md">Get to know our qualified and experienced faculty members.</h2>
 
           <div className="md:grid-cols-3 grid gap-10">
             {images.map((sir,index)=>(
-              <div key={index} className="flex justify-center items-center flex-col">
+              <div key={index} className="flex justify-center items-center flex-col mt-2">
                 <img src={sir.image} alt={sir.name}/>
                 <p className="text-2xl text-primary font-bold mt-4">{sir.name}</p>
                 <p className="text-md">{sir.description}</p>
+                {/* <ThreeDCardDemo {...sir}/> */}
               </div>
             ))}
           </div>
@@ -117,31 +120,9 @@ function LandingPage() {
             </div>
 
             {/* Testimonails - section */}
-            <div className="flex overflow-x-auto space-x-4 py-4 px-2 snap-x snap-mandatory">
-            <div className="snap-center flex-shrink-0">
-              <TestimonialCard />
-            </div>
-            <div className="snap-center  flex-shrink-0">
-              <TestimonialCard />
-            </div>
-            <div className="snap-center  flex-shrink-0">
-              <TestimonialCard />
-            </div>
-            
-            {/* <div className="snap-center">
-              <TestimonialCard />
-            </div>
-            <div className="snap-center">
-              <TestimonialCard />
-            </div>
-            <div className="snap-center">
-              <TestimonialCard />
-            </div>
-            <div className="snap-center">
-              <TestimonialCard />
-            </div> */}
+          <div>
+            <Crousal/>
           </div>
-
 
 
             {/* section - study resourses */}
