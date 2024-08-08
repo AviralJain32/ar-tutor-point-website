@@ -6,6 +6,7 @@ import MainLayout from './Layouts/MainLayout.jsx'
 import LandingPage from './pages/LandingPage.jsx'
 import AboutusPage from './pages/AboutusPage.jsx'
 import DemoVideoPage from './pages/DemoVideoPage.jsx'
+import NotesPage from './pages/NotesPage.jsx'
 
 const router=createBrowserRouter(createRoutesFromElements(
   <>
@@ -13,6 +14,7 @@ const router=createBrowserRouter(createRoutesFromElements(
     <Route index element={<LandingPage/>} />
     <Route path="aboutus" element={<AboutusPage/>} />
     <Route path="demo" element={<DemoVideoPage/>} />
+    <Route path="notes" element={<NotesPage/>}/>
   </Route>
   </>
   )
