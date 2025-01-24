@@ -7,12 +7,12 @@ import {
   } from '../components/Accordion';
 
 
-const NotesPage =()=>{
+const ReferenceBooksPage =()=>{
   const classes=["12 (Science)","12 (Commerce)"]
     return(
       <div>
         <div className='w-full flex justify-center items-center'>
-          <h2 className='font-bold text-xl'>Notes</h2>
+          <h2 className='font-bold text-xl'>Reference Books</h2>
         </div>
         {/* <div className='bg-blue-50 p-4 gap-5 flex flex-col'>
           <div className='bg-white p-4'>
@@ -70,4 +70,4 @@ const NotesPage =()=>{
 
 }
 
-export default NotesPage;
+export default ReferenceBooksPage;

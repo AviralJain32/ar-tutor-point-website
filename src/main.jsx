@@ -7,6 +7,8 @@ import LandingPage from './pages/LandingPage.jsx'
 import AboutusPage from './pages/AboutusPage.jsx'
 import DemoVideoPage from './pages/DemoVideoPage.jsx'
 import NotesPage from './pages/NotesPage.jsx'
+import QuestionPapersPage from './pages/QuestionPapersPage.jsx'
+import ReferenceBooksPage from './pages/ReferenceBooksPage.jsx'
 
 const router=createBrowserRouter(createRoutesFromElements(
   <>
@@ -15,6 +17,8 @@ const router=createBrowserRouter(createRoutesFromElements(
     <Route path="aboutus" element={<AboutusPage/>} />
     <Route path="demo" element={<DemoVideoPage/>} />
     <Route path="notes" element={<NotesPage/>}/>
+    <Route path="questionpapers" element={<QuestionPapersPage/>}/>
+    <Route path="referencebooks" element={<ReferenceBooksPage/>}/>
   </Route>
   </>
   )

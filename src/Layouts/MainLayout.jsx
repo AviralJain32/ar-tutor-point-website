@@ -3,10 +3,12 @@ import { Outlet } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Background from "../assets/Background.svg"
+import ScrollToTop from '../ScrollToTop'
 
 const MainLayout = () => {
   return (
     <div>
+      <ScrollToTop></ScrollToTop>
     <Navbar/>
     <div style={{
                 backgroundImage:`url(${Background})`,

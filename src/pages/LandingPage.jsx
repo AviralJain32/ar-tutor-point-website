@@ -17,7 +17,7 @@ import Notes from "../assets/Notes.svg"
 import ReferenceBooks from "../assets/ReferenceBooks.svg"
 import QuestionPaper from "../assets/Questionpaper.svg"
 import { FaArrowRight } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom"
+import { useNavigate,Link } from "react-router-dom"
 import TestimonialCard from "../components/TestimonialCard"
 import  Crousal from "../components/Crousal"
 import { ThreeDCardDemo } from "../components/Sir3DCard"
@@ -28,9 +28,9 @@ function LandingPage() {
     ,{image:AyushSir,name:"Ayush Yadav",description:"Faculty of Physics & Mathematics"}]
 
   const StudyResourceImages=[
-    {image:Notes,name:"Notes",link:"#"},
-    {image:ReferenceBooks,name:"Reference Books",description:"#"},
-    ,{image:QuestionPaper,name:"Question Papers",description:"#"},
+    {image:Notes,name:"Notes",link:"/notes"},
+    {image:ReferenceBooks,name:"Reference Books",link:"/referencebooks"},
+    {image:QuestionPaper,name:"Question Papers",link:"/questionpapers"},
   ]
 
   const words=["dream","create","inspire"]
@@ -131,11 +131,13 @@ function LandingPage() {
               <div>
               <div className="md:grid-cols-3 grid">
                 {StudyResourceImages.map((StudyResource,index)=>(
-                  <div key={index} className="relative flex justify-center items-center flex-col opacity-[0.5] hover:opacity-100 cursor-pointer group">
-                    <div className="absolute top-2 left-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:-translate-x-4 translate-x-0">{StudyResource.name}</div>
-                    <div className="absolute top-2 right-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:translate-x-4 translate-x-0"><FaArrowRight/></div>
-                    <img src={StudyResource.image} alt={StudyResource.name}/>
-                  </div>
+                  <Link to={StudyResource.link}>
+                    <div key={index} className="relative flex justify-center items-center flex-col opacity-[0.5] hover:opacity-100 cursor-pointer group">
+                      <div className="absolute top-2 left-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:-translate-x-4 translate-x-0">{StudyResource.name}</div>
+                      <div className="absolute top-2 right-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:translate-x-4 translate-x-0"><FaArrowRight/></div>
+                      <img src={StudyResource.image} alt={StudyResource.name}/>
+                    </div>
+                  </Link>
                 ))}
               </div>
               </div>
