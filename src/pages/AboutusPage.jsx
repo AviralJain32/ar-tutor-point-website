@@ -25,7 +25,7 @@ const AboutusPage = () => {
   return (
     <div className="font-Main-font">
 
-      <div style={{backgroundImage:`url(${vectorimg})`,backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundPosition:"left top"}}>
+      <div>
       <div className="flex justify-center">
 
         <h1 className="text-[32px] font-extrabold">About Us</h1>
@@ -100,29 +100,44 @@ const AboutusPage = () => {
           <div className="md:col-span-4 h-6">Join the AR Tutor's Point family and experience the difference personalized tutoring can make. Contact us today to schedule a consultation and take the first step towards academic success!</div>
         </div>
 
-        <div className="grid md:grid-cols-2 my-20 gap-x-8">
-          <div className="">
-            <Form/>
-          </div>
-          <div className="">
-            <div className="flex flex-col text-lg gap-10">
-              <div className="font-bold text-3xl">Contact</div>
-              <div className="flex gap-10">
-                <div><IoLocationOutline /></div>
-                <div>B-9 Gururamdas nagar, Laxmi Nagar, Balaji Rasoi, Delhi 110092</div>
+        <div className="grid md:grid-cols-2 my-24 gap-x-8 gap-y-10">
+        <div className="flex justify-center">
+          <Form className="w-full max-w-md sm:max-w-lg" />
+        </div>
+        <div>
+          <div className="flex flex-col text-lg gap-10 mt-20 md:mt-0">
+            <div className="font-bold text-3xl">Contact</div>
+            <div className="flex gap-4">
+              <div>
+                <IoLocationOutline />
               </div>
-              <div className="flex gap-10">
-                <div><IoCallOutline /></div>
-                <div>9716482969 / 9582524208 / 9205515818 </div>
-              </div>
-              <div className="flex gap-10">
-                <div><FaRegMessage /></div>
-                <div>artutorspoint.info@gmail.com</div>
-              </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7097523909965!2d77.27369537528922!3d28.63845987566147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd496b842d89%3A0x38e8859a52f36bd5!2sAR%20Tutor&#39;s%20Point!5e0!3m2!1sen!2sin!4v1723117144298!5m2!1sen!2sin" width="600" height="300"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div>B-9 Gururamdas nagar, Laxmi Nagar, Balaji Rasoi, Delhi 110092</div>
             </div>
+            <div className="flex gap-4">
+              <div>
+                <IoCallOutline />
+              </div>
+              <div>9716482969 / 9582524208 / 9205515818</div>
+            </div>
+            <div className="flex gap-4">
+              <div>
+                <FaRegMessage />
+              </div>
+              <div>artutorspoint.info@gmail.com</div>
+            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7097523909965!2d77.27369537528922!3d28.63845987566147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd496b842d89%3A0x38e8859a52f36bd5!2sAR%20Tutor&#39;s%20Point!5e0!3m2!1sen!2sin!4v1723117144298!5m2!1sen!2sin"
+              width="100%"
+              height="300"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-lg"
+            ></iframe>
           </div>
         </div>
+      </div>
+
       </div>
       
     </div>
