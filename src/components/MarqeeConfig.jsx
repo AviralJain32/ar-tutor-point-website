@@ -63,8 +63,6 @@
 
 // export default Carousel;
 
-
-
 import React from 'react';
 
 export default function Marquee({
@@ -90,9 +88,7 @@ export default function Marquee({
               !vertical ? 'animate-marquee flex-row' : ''
             } ${
               pauseOnHover ? 'group-hover:[animation-play-state:paused]' : ''
-            } ${
-              reverse ? '[animation-direction:reverse]' : ''
-            }`}
+            } ${reverse ? '[animation-direction:reverse]' : ''}`}
           >
             {children}
           </div>

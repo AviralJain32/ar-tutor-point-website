@@ -1,23 +1,18 @@
-
 import React, {
   createContext,
   useState,
   useContext,
   useRef,
   useEffect,
-} from "react";
+} from 'react';
 
 const MouseEnterContext = createContext(undefined);
 
-export const CardContainer = ({
-  children,
-  className,
-  containerClassName,
-}) => {
+export const CardContainer = ({ children, className, containerClassName }) => {
   const containerRef = useRef(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = e => {
     if (!containerRef.current) return;
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect();
@@ -41,7 +36,7 @@ export const CardContainer = ({
       <div
         className={`py-20 flex items-center justify-center ${containerClassName}`}
         style={{
-          perspective: "1000px",
+          perspective: '1000px',
         }}
       >
         <div
@@ -51,7 +46,7 @@ export const CardContainer = ({
           onMouseLeave={handleMouseLeave}
           className={`flex items-center justify-center relative transition-all duration-200 ease-linear ${className}`}
           style={{
-            transformStyle: "preserve-3d",
+            transformStyle: 'preserve-3d',
           }}
         >
           {children}
@@ -72,7 +67,7 @@ export const CardBody = ({ children, className }) => {
 };
 
 export const CardItem = ({
-  as: Tag = "div",
+  as: Tag = 'div',
   children,
   className,
   translateX = 0,
@@ -114,7 +109,7 @@ export const CardItem = ({
 export const useMouseEnter = () => {
   const context = useContext(MouseEnterContext);
   if (context === undefined) {
-    throw new Error("useMouseEnter must be used within a MouseEnterProvider");
+    throw new Error('useMouseEnter must be used within a MouseEnterProvider');
   }
   return context;
 };

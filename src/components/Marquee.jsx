@@ -9,7 +9,7 @@ const reviews = [IMG1, IMG2, IMG3, IMG4];
 const ReviewCard = ({ img }) => {
   return (
     // <div className="relative w-96">
-      <img src={img} alt="" className='object-fill h-[25rem]' />
+    <img src={img} alt="" className="object-fill h-[25rem]" />
     // </div>
   );
 };
@@ -25,6 +25,5 @@ export function MarqueeDemo() {
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-white dark:from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l from-white dark:from-background"></div>
     </div>
-    
   );
 }
