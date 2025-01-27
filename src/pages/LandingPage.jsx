@@ -1,26 +1,26 @@
-import sirLandingPage from '../assets/3-sir-landing-page-picture.svg';
-import WordRotate from '../components/WordRotateEffect';
-import cubeForBg from '../assets/bg-components/cube-group.svg';
-import trianglecubeForBg from '../assets/bg-components/Group.svg';
-import roundedCubeForBg from '../assets/bg-components/extrude-group.svg';
-import cylindercubeForBg from '../assets/bg-components/cylinder-group.svg';
-import tutionGroupPicture from '../assets/Tution_group_pic_section2_mainPage.svg';
-import subpic1 from '../assets/Small Batches.svg';
-import subpic2 from '../assets/Regular Doubt Classes & Tests.svg';
-import subpic3 from '../assets/Smart Classes.svg';
-import subpic4 from '../assets/ExclusiveStudyMaterialPic.svg';
-import AyushSir from '../assets/AyushSirIndivisualPic.svg';
-import ArpitSir from '../assets/ArpitSirIndivisualPic.svg';
-import RakeshSir from '../assets/RakeshSirIndivisualPicture.svg';
-import { MarqueeDemo } from '../components/Marquee';
-import Notes from '../assets/Notes.svg';
-import ReferenceBooks from '../assets/ReferenceBooks.svg';
-import QuestionPaper from '../assets/Questionpaper.svg';
-import { FaArrowRight } from 'react-icons/fa6';
-import { useNavigate } from 'react-router-dom';
-import TestimonialCard from '../components/TestimonialCard';
-import Crousal from '../components/Crousal';
-import { ThreeDCardDemo } from '../components/Sir3DCard';
+import sirLandingPage from "../assets/3-sir-landing-page-picture.svg"
+import WordRotate from "../components/WordRotateEffect"
+import cubeForBg from "../assets/bg-components/cube-group.svg"
+import trianglecubeForBg from "../assets/bg-components/Group.svg"
+import roundedCubeForBg from "../assets/bg-components/extrude-group.svg"
+import cylindercubeForBg from "../assets/bg-components/cylinder-group.svg"
+import tutionGroupPicture from "../assets/Tution_group_pic_section2_mainPage.svg"
+import subpic1 from "../assets/Small Batches.svg"
+import subpic2 from "../assets/Regular Doubt Classes & Tests.svg"
+import subpic3 from "../assets/Smart Classes.svg"
+import subpic4 from "../assets/ExclusiveStudyMaterialPic.svg"
+import AyushSir from "../assets/AyushSirIndivisualPic.svg"
+import ArpitSir from "../assets/ArpitSirIndivisualPic.svg"
+import RakeshSir from "../assets/RakeshSirIndivisualPicture.svg"
+import { MarqueeDemo } from "../components/Marquee"
+import Notes from "../assets/Notes.svg"
+import ReferenceBooks from "../assets/ReferenceBooks.svg"
+import QuestionPaper from "../assets/Questionpaper.svg"
+import { FaArrowRight } from "react-icons/fa6";
+import { useNavigate,Link } from "react-router-dom"
+import TestimonialCard from "../components/TestimonialCard"
+import  Crousal from "../components/Crousal"
+import { ThreeDCardDemo } from "../components/Sir3DCard"
 
 function LandingPage() {
   const images = [
@@ -38,12 +38,11 @@ function LandingPage() {
     },
   ];
 
-  const StudyResourceImages = [
-    { image: Notes, name: 'Notes', link: '#' },
-    { image: ReferenceBooks, name: 'Reference Books', description: '#' },
-    ,
-    { image: QuestionPaper, name: 'Question Papers', description: '#' },
-  ];
+  const StudyResourceImages=[
+    {image:Notes,name:"Notes",link:"/notes"},
+    {image:ReferenceBooks,name:"Reference Books",link:"/referencebooks"},
+    {image:QuestionPaper,name:"Question Papers",link:"/questionpapers"},
+  ]
 
   const words = ['dream', 'create', 'inspire'];
   const navigate = useNavigate();
@@ -177,28 +176,26 @@ function LandingPage() {
         <Crousal />
       </div>
 
-      {/* section - study resourses */}
-      <div>
-        <h1 className="text-3xl font-bold text-center my-6">Study Resources</h1>
-        <div>
-          <div className="md:grid-cols-3 grid">
-            {StudyResourceImages.map((StudyResource, index) => (
-              <div
-                key={index}
-                className="relative flex justify-center items-center flex-col opacity-[0.5] hover:opacity-100 cursor-pointer group"
-              >
-                <div className="absolute top-2 left-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:-translate-x-4 translate-x-0">
-                  {StudyResource.name}
-                </div>
-                <div className="absolute top-2 right-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:translate-x-4 translate-x-0">
-                  <FaArrowRight />
-                </div>
-                <img src={StudyResource.image} alt={StudyResource.name} />
+            {/* section - study resourses */}
+            <div>
+              <h1 className="text-3xl font-bold text-center my-6">Study Resources</h1>
+              <div>
+              <div className="md:grid-cols-3 grid">
+                {StudyResourceImages.map((StudyResource,index)=>(
+                  <Link to={StudyResource.link}>
+                    <div key={index} className="relative flex justify-center items-center flex-col opacity-[0.5] hover:opacity-100 cursor-pointer group">
+                      <div className="absolute top-2 left-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:-translate-x-4 translate-x-0">{StudyResource.name}</div>
+                      <div className="absolute top-2 right-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:translate-x-4 translate-x-0"><FaArrowRight/></div>
+                      <img src={StudyResource.image} alt={StudyResource.name}/>
+                    </div>
+                  </Link>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
+              </div>
+            </div>
+
+            
+
     </div>
   );
 }
