@@ -22,7 +22,7 @@ const Navbar = () => {
 
   let[open,setopen]=useState(false)
 
-  const phone = "8595698236"; // Replace with the tutor's phone number
+  const phone = "9810412880"; // Replace with the tutor's phone number
   const message = encodeURIComponent("I'm interested in your coaching services. Can you provide more details?");
   const whatsappLink = `https://wa.me/91${phone}?text=${message}`;
   
