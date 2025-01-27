@@ -39,9 +39,9 @@ function LandingPage() {
   ];
 
   const StudyResourceImages=[
-    {image:Notes,name:"Notes",link:"/notes"},
-    {image:ReferenceBooks,name:"Reference Books",link:"/referencebooks"},
-    {image:QuestionPaper,name:"Question Papers",link:"/questionpapers"},
+    {image:Notes,name:"Notes",link:"material/notes"},
+    {image:ReferenceBooks,name:"Reference Books",link:"material/referencebooks"},
+    {image:QuestionPaper,name:"Question Papers",link:"material/questionpapers"},
   ]
 
   const words = ['dream', 'create', 'inspire'];

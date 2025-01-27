@@ -9,6 +9,8 @@ import DemoVideoPage from './pages/DemoVideoPage.jsx'
 import NotesPage from './pages/NotesPage.jsx'
 import QuestionPapersPage from './pages/QuestionPapersPage.jsx'
 import ReferenceBooksPage from './pages/ReferenceBooksPage.jsx'
+import MaterialPage from './pages/MaterialPage.jsx'
+import { LinkSubmissionPage } from './pages/LinkSubmissionPage.jsx'
 
 const router=createBrowserRouter(createRoutesFromElements(
   <>
@@ -16,9 +18,12 @@ const router=createBrowserRouter(createRoutesFromElements(
     <Route index element={<LandingPage/>} />
     <Route path="aboutus" element={<AboutusPage/>} />
     <Route path="demo" element={<DemoVideoPage/>} />
-    <Route path="notes" element={<NotesPage/>}/>
+    <Route path="material/:type" element={<MaterialPage/>}/>
+    <Route path="linksubmission" element={<LinkSubmissionPage/>}/>
+    {/* <Route path="notes" element={<NotesPage/>}/>
     <Route path="questionpapers" element={<QuestionPapersPage/>}/>
-    <Route path="referencebooks" element={<ReferenceBooksPage/>}/>
+    <Route path="referencebooks" element={<ReferenceBooksPage/>}/> */}
+
   </Route>
   </>
   )

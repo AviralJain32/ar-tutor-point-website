@@ -12,11 +12,11 @@ const Navbar = () => {
     {Name:"HOME",RedirectLink:"/"},
     {Name:"ABOUT US",RedirectLink:"/aboutus"},
     {Name:"DEMO VIDEOS",RedirectLink:"/demo"},
-    {Name:"STUDY MATERIAL",RedirectLink:"/Notes",
+    {Name:"STUDY MATERIAL",RedirectLink:"/material/notes",
       Dropdown: [
-        { Name: "Notes", RedirectLink: "/notes" },
-        { Name: "Reference Books", RedirectLink: "/referencebooks" },
-        { Name: "Question Papers", RedirectLink: "/questionpapers" },
+        { Name: "Notes", RedirectLink: "/material/notes" },
+        { Name: "Reference Books", RedirectLink: "/material/referencebooks" },
+        { Name: "Question Papers", RedirectLink: "/material/questionpaper" },
       ],}
   ];
 
