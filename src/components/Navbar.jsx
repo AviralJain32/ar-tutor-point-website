@@ -12,7 +12,7 @@ const Navbar = () => {
     {Name:"HOME",RedirectLink:"/"},
     {Name:"ABOUT US",RedirectLink:"/aboutus"},
     {Name:"DEMO VIDEOS",RedirectLink:"/demo"},
-    {Name:"STUDY MATERIAL",RedirectLink:"/material/notes",
+    {Name:"STUDY MATERIAL",
       Dropdown: [
         { Name: "Notes", RedirectLink: "/material/notes" },
         { Name: "Reference Books", RedirectLink: "/material/referencebooks" },
@@ -27,9 +27,9 @@ const Navbar = () => {
   const whatsappLink = `https://wa.me/91${phone}?text=${message}`;
   
   return (
-    <div className="w-full sticky top-0 z-10 bg-white sm:px-16 sm:py-2 ">
+    <div className="w-full sticky top-0 z-10 bg-white sm:px-16 sm:py-2 md:px-10 ">
       <div className=" font-Main-font pb-2 justify-between bg-white items-center md:pb-0 md:flex ">
-        <div className="">
+        <div className="md:mr-4 md:flex">
           <img
             src={logo_nav}
             alt="Logo"
@@ -55,18 +55,15 @@ const Navbar = () => {
               ))
             } 
           </ul> */}
-          <ul className={`text-gray-700 md:flex md:gap-12 md:p-2 transition-all duration-500 ease-in
+          <ul className={`text-gray-700 md:flex md:gap-10 justify-evenly transition-all duration-500 ease-in
           ${open?"":"hidden"}`}>
         {navLinks.map((navLink) => (
-          <li
-            key={navLink.Name}
-            className="relative group my-7 font-medium text-center text-[14px] px-4 md:my-0 md:text-md md:px-1 hover:text-gray-400 duration-200 ease-in-out"
+          <li key={navLink.Name} className="relative group my-2 text-[14px] md:flex font-medium text-center px-4 md:px-1  hover:text-gray-400 duration-200 ease-in-out"
           >
             <a href={navLink.RedirectLink}>{navLink.Name}</a>
-
             {/* Dropdown Menu */}
             {navLink.Dropdown && (
-              <ul className="absolute left-0 hidden w-40 bg-white shadow-lg group-hover:block">
+              <ul className="absolute left-0 hidden w-40 border bg-white shadow-lg group-hover:block md:group-hover:block">
                 {navLink.Dropdown.map((dropdownItem) => (
                   <li
                     key={dropdownItem.Name}

@@ -66,19 +66,22 @@ const Footer = () => {
             <h3 className="text-[14px]">IMPORTANT LINKS</h3>
             <ul className="mt-2 font-extralight text-gray-300 text-sm cursor-pointer">
               <li className="flex gap-2 items-center py-1 hover:underline ">
-                <p>Demo Videos</p>
+                <a href="/demo">Demo Videos</a>
               </li>
               <li className="flex gap-2 items-center py-1 hover:underline">
-                <p href="/">Class Notes</p>
+                <a href="/material/notes">Class Notes</a>
+              </li>
+              {/* <li className="flex gap-2 items-center py-1 hover:underline">
+                <a href="/">Faculty</a>
+              </li> */}
+              <li className="flex gap-2 items-center py-1 hover:underline">
+                <a href="/material/referencebooks">Reference Books</a>
               </li>
               <li className="flex gap-2 items-center py-1 hover:underline">
-                <p href="/">Faculy</p>
+                <a href="/material/questionpaper">Question Papers</a>
               </li>
               <li className="flex gap-2 items-center py-1 hover:underline">
-                <p href="/">Test Papers</p>
-              </li>
-              <li className="flex gap-2 items-center py-1 hover:underline">
-                <p href="/">Contact Us</p>
+                <a href="/aboutus">About Us</a>
               </li>
             </ul>
           </div>

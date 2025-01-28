@@ -177,7 +177,7 @@ function LandingPage() {
       </div>
 
             {/* section - study resourses */}
-            <div>
+            <div className="pb-4">
               <h1 className="text-3xl font-bold text-center my-6">Study Resources</h1>
               <div>
               <div className="md:grid-cols-3 grid">
@@ -185,7 +185,7 @@ function LandingPage() {
                   <Link to={StudyResource.link}>
                     <div key={index} className="relative flex justify-center items-center flex-col opacity-[0.5] hover:opacity-100 cursor-pointer group">
                       <div className="absolute top-2 left-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:-translate-x-4 translate-x-0">{StudyResource.name}</div>
-                      <div className="absolute top-2 right-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:translate-x-4 translate-x-0"><FaArrowRight/></div>
+                      <div className="absolute top-2 right-24 text-2xl font-bold transition-transform ease-in-out transform group-hover:translate-x-4 translate-x-0"><FaArrowRight className="md:display-none"/></div>
                       <img src={StudyResource.image} alt={StudyResource.name}/>
                     </div>
                   </Link>
@@ -193,9 +193,6 @@ function LandingPage() {
               </div>
               </div>
             </div>
-
-            
-
     </div>
   );
 }
