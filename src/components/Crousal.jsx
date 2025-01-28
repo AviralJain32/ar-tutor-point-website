@@ -13,14 +13,6 @@ const Crousal = () => {
     slider.scrollLeft += 550;
   };
 
-  useEffect(() => {
-    const slider = document.getElementById('slider');
-    const autoScroll = setInterval(() => {
-      slider.scrollLeft += 1550;
-    }, 1500);
-    return () => clearInterval(autoScroll);
-  }, []);
-
   return (
     <div className="relative flex items-center">
       <div

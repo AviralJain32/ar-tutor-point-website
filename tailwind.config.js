@@ -11,7 +11,7 @@ export default {
         primary: '#586AFC',
       },
       fontFamily: {
-        'Main-font': ['Inter', 'Poppins'],
+        'Main-font': ['Inter',"serif"],
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
