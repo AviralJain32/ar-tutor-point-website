@@ -11,10 +11,12 @@ const MainLayout = () => {
       <ScrollToTop></ScrollToTop>
     <Navbar/>
     <div style={{
-                backgroundImage:`url(${Background})`,
+                backgroundImage: `url(${Background})`,
                 backgroundBlendMode: "overlay",
-                backgroundRepeat:"repeat",
-                backgroundColor: 'rgba(255, 255, 255, 0.95)', 
+                backgroundRepeat: "repeat",
+                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                WebkitBackdropFilter: "blur(10px)", // Safari-specific
+                backdropFilter: "blur(10px)", // Standard
                     }} className='min-h-screen sm:px-16 px-6'>
       <Outlet/>
       </div>

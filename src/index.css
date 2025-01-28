@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter-Regular.woff2') format('woff2'),
+         url('./assets/fonts/Inter-Regular.woff') format('woff'),
+         url('./assets/fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: 400; /* Adjust weight if necessary */
+    font-style: normal; /* Adjust style if necessary */
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Regular.woff2') format('woff2'),
+         url('./assets/fonts/Poppins-Regular.woff') format('woff'),
+         url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+

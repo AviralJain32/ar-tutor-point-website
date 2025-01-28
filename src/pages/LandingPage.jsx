@@ -180,7 +180,7 @@ function LandingPage() {
             <div className="pb-4">
               <h1 className="text-3xl font-bold text-center my-6">Study Resources</h1>
               <div>
-              <div className="md:grid-cols-3 grid">
+              <div className="md:grid-cols-3 grid p-5">
                 {StudyResourceImages.map((StudyResource,index)=>(
                   <Link to={StudyResource.link}>
                     <div key={index} className="relative flex justify-center items-center flex-col opacity-[0.5] hover:opacity-100 cursor-pointer group">
