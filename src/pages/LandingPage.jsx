@@ -23,6 +23,11 @@ import  Crousal from "../components/Crousal"
 import { ThreeDCardDemo } from "../components/Sir3DCard"
 
 function LandingPage() {
+
+  const phone = "9810412880"; // Replace with the tutor's phone number
+  const message = encodeURIComponent("I'm interested in your coaching services. Can you provide more details?");
+  const whatsappLink = `https://wa.me/91${phone}?text=${message}`;
+
   const images = [
     {
       image: RakeshSir,
@@ -72,7 +77,7 @@ function LandingPage() {
         />
 
         <div className="flex justify-center flex-col md:w-[40rem]">
-          <h1 className="sm:text-5xl font-[700] text-wrap text-4xl !leading-[4rem]">
+          <h1 className="xl:text-5xl text-4xl font-[700] text-wrap !leading-[4rem]">
             Empowering Students to <WordRotate words={words} /> and Succeed.
           </h1>
           <div className="mt-8 text-xl">
@@ -86,9 +91,11 @@ function LandingPage() {
             >
               Demo Video
             </button>
-            <button className="text-primary border-2 border-primary bor p-2 px-4 rounded-3xl text-lg">
-              Register a Call
-            </button>
+            <Link to={whatsappLink}>
+              <button className="text-primary border-2 border-primary  p-2 px-4 rounded-3xl text-lg">
+                Register a Call
+              </button>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center items-center">
@@ -97,16 +104,16 @@ function LandingPage() {
       </div>
 
       {/* section 2  */}
-      <div className="flex gap-3 justify-around flex-col md:flex-row">
+      <div className="flex gap-3 justify-around flex-col xl:flex-row">
         {/* grid md:grid-cols-3 gap-24  */}
         <div className="flex justify-center items-center">
           <img src={tutionGroupPicture} alt="Tution_group_picture" />
         </div>
 
         <div className=" md:w-[45rem]">
-          <div className="flex flex-col  gap-4 text-ellipsis">
+          <div className="flex flex-col  gap-2 text-ellipsis">
             <h3>EXCELLENCE</h3>
-            <div className="text-5xl font-bold !leading-[4rem]">
+            <div className="xl:text-5xl text-4xl font-bold !leading-[4rem]">
               Unlock Your Potential with Our Specialized Programs
             </div>
             <div className="text-lg ">
@@ -116,7 +123,7 @@ function LandingPage() {
             </div>
           </div>
 
-          <div className="gap-y-5 md:mt-4 grid md:grid-cols-2 justify-around w-11/12 ">
+          <div className="gap-y-5 md:mt-4 mt-6 grid md:grid-cols-2 justify-around w-11/12 ">
             <div className="flex gap-8 items-center ">
               <img src={subpic1} alt="subpic1" />
               <div className="text-lg">Small Batches</div>

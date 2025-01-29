@@ -29,11 +29,11 @@ const Navbar = () => {
   return (
     <div className="w-full sticky top-0 z-10 bg-white sm:px-16 sm:py-2 md:px-10 ">
       <div className=" font-Main-font pb-2 justify-between bg-white items-center md:pb-0 md:flex ">
-        <div className="md:mr-4 md:flex">
+        <div className="">
           <img
             src={logo_nav}
             alt="Logo"
-            className=" h-12 pt-2 ml-3 md:pt-0 md:ml-4"
+            className=" xl:h-12 h-10 pt-2 ml-3 md:pt-0 md:ml-4"
           />
         </div>
         <div
@@ -55,10 +55,10 @@ const Navbar = () => {
               ))
             } 
           </ul> */}
-          <ul className={`text-gray-700 md:flex md:gap-10 justify-evenly transition-all duration-500 ease-in
+          <ul className={`text-gray-700 md:flex md:gap-4 xl:gap-10 justify-evenly transition-all duration-500 ease-in
           ${open?"":"hidden"}`}>
         {navLinks.map((navLink) => (
-          <li key={navLink.Name} className="relative group my-2 text-[14px] md:flex font-medium text-center px-4 md:px-1  hover:text-gray-400 duration-200 ease-in-out"
+          <li key={navLink.Name} className="relative group my-2 text-[12px] xl:text-[14px] font-medium text-center hover:text-gray-400 duration-200 ease-in-out"
           >
             <a href={navLink.RedirectLink}>{navLink.Name}</a>
             {/* Dropdown Menu */}
@@ -67,7 +67,7 @@ const Navbar = () => {
                 {navLink.Dropdown.map((dropdownItem) => (
                   <li
                     key={dropdownItem.Name}
-                    className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="px-4 py-2 text-xs text-gray-700 hover:bg-gray-100"
                   >
                     <a href={dropdownItem.RedirectLink}>{dropdownItem.Name}</a>
                   </li>
