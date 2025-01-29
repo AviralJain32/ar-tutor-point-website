@@ -18,7 +18,7 @@ const Crousal = () => {
       {
         date:"Mar 10, 2019",
         stars:"4.0",
-        name:"Aviral",
+        name:"Aviral Jain",
         batch:"Science 2022",
         para:"Loved this place so much as a student.. Great and the most frank teachers you will ever see in your whole life.. Even after passing out this place holds a special place in my heart :)"
       },
@@ -157,14 +157,6 @@ const Crousal = () => {
       },
   ]
   
-
-  // useEffect(() => {
-  //   const slider = document.getElementById('slider');
-  //   const autoScroll = setInterval(() => {
-  //     slider.scrollLeft += 1550;
-  //   }, 4000);
-  //   return () => clearInterval(autoScroll);
-  // }, []);
 
   return (
     <div className="relative flex items-center">
