@@ -179,20 +179,20 @@ function LandingPage() {
       </div>
 
       {/* Testimonails - section */}
-      <div>
+      <div className="">
         <Crousal />
       </div>
 
             {/* section - study resourses */}
-            <div className="pb-4">
-              <h1 className="text-3xl font-bold text-center my-6">Study Resources</h1>
+            <div className="pb-4 mt-[-44px]">
+              <h1 className="text-3xl font-bold text-center mt-2">Study Resources</h1>
               <div>
               <div className="md:grid-cols-3 grid p-5">
                 {StudyResourceImages.map((StudyResource,index)=>(
                   <Link to={StudyResource.link}>
                     <div key={index} className="relative flex justify-center items-center flex-col opacity-[0.5] hover:opacity-100 cursor-pointer group">
-                      <div className="absolute top-2 left-10 sm:left-9  lg:left-20 3xl:left-44 text-2xl font-bold transition-transform ease-in-out transform group-hover:-translate-x-4 translate-x-0">{StudyResource.name}</div>
-                      <div className="absolute top-2 right-10 sm:right-9 lg:right-20 3xl:right-44 text-2xl font-bold transition-transform ease-in-out transform group-hover:translate-x-4 translate-x-0"><FaArrowRight className="md:display-none"/></div>
+                      <div className="absolute top-2 left-5 sm:left-9  lg:left-20 3xl:left-44 text-l xl:text-2xl font-bold transition-transform ease-in-out transform group-hover:-translate-x-4 translate-x-0">{StudyResource.name}</div>
+                      <div className="absolute top-2 right-8 sm:right-2 lg:right-20 3xl:right-44 text-xl xl:text-2xl font-bold transition-transform ease-in-out transform group-hover:translate-x-4 translate-x-0"><FaArrowRight className="md:display-none"/></div>
                       <img src={StudyResource.image} alt={StudyResource.name}/>
                     </div>
                   </Link>

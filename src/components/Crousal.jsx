@@ -13,7 +13,6 @@ const Crousal = () => {
     slider.scrollLeft += 550;
   };
   
-  
     const Testimonails=[
       {
         date:"Mar 10, 2019",
@@ -159,7 +158,7 @@ const Crousal = () => {
   
 
   return (
-    <div className="relative flex items-center">
+    <div className="relative flex -mx-4 items-center">
       <div
         className="opacity-50 cursor-pointer hover:opacity-100 h-full flex items-center"
         onClick={slideLeft}
@@ -176,16 +175,11 @@ const Crousal = () => {
               date={elem.date}
               name={elem.name}
               stars={elem.stars}
-              para={(elem.para).length<300?elem.para:(elem.para).slice(0,300)+"...."}
+              para={(elem.para).length<300?elem.para:(elem.para).slice(0,300)+" ...."}
               batch={elem.batch}
             />
           )
         })}
-        {/* <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard /> */}
       </div>
       <div
         className="opacity-50 cursor-pointer hover:opacity-100 h-full flex items-center"
